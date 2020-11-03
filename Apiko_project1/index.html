@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="form1" action="#">
+        <h4>Email:</h4>
+        <input
+          id="email"
+          type="text"
+          name="email"
+          placeholder="Enter email"
+          class="email-input"
+          custom-pattern="([A-Za-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)"
+          onchange="onChange(this.id)"
+        />
+        <p id="error-email" class="error-text"></p>
+        <h4>Password:</h4>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter password"
+          class="password-input"
+          custom-pattern="(?=.*\d)(?=.*[A-Za-z]).{8,15}"
+          onchange="onChange(this.id)"
+        />
+        <p id="error-password" class="error-text"></p>
+        <input
+          type="submit"
+          name="submit"
+          value="Submit"
+          class="submit-input"
+        />
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

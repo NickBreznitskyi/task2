@@ -1,0 +1,52 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.form-container {
+  margin: 0 auto;
+  width: 300px;
+  border: solid 1px;
+  padding: 60px;
+  border-radius: 5px;
+  .error-text {
+    display: block;
+    color: red;
+    font-size: 14px;
+  }
+
+  h4 {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+  }
+
+  .email-input,
+  .password-input {
+    width: calc(100% - 12px);
+    padding: 0;
+    border: solid 1px;
+    height: 15px;
+    border-radius: 3px;
+    padding: 5px;
+  }
+
+  .submit-input {
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 3px;
+    border: solid 1px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      border-radius: 3px;
+    }
+  }
+}
